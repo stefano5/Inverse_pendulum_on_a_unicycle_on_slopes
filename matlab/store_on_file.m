@@ -1,5 +1,5 @@
 % Robotics project, Menolotto Mariangela & Stefano Maugeri
-path = 'C:\Users\stefa\Desktop\Robotica\Project\mathematica\ego_export\';
+path = '../export/';
 
 if exist(path, 'dir') == 0
    disp("Mathematica not found"); 
