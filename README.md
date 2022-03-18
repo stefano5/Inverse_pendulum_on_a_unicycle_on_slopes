@@ -34,3 +34,6 @@ If you want to see the simulation video, run the file:
 		mathematica/visualization_matlab_simulation.nb
 
 then evaluate the notebook and press "play".
+
+# Results
+https://user-images.githubusercontent.com/40228829/159013696-a33daf8d-1751-42ba-a130-796e2470a7fe.mp4
