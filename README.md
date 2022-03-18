@@ -8,13 +8,16 @@ The goal of the project was to model and control a robot of Università di Pisa.
 
 Università di Pisa have already developed this robot, but it is not able to go on slopes, so they asked us (as students) to devolop a controller that let the robot walk on slopes. This was the challenge of our Robotics project.
 
-We started from scratch, modelling an inverse pendulum over a unicycle on a splope on Mathematica. You will find the equations in "mathemtatica/dynamic and static of an inverse pendulum over a unicycle on slopes.nb".
-Then we wrote the model in Simulink, computing the dynamics matrices stored on "matlab\Matrici_eq_dinamica\". 
+We started from scratch, modelling an inverse pendulum over a unicycle on a splope on Mathematica. You will find the equations in:
+
+		mathemtatica/dynamic and static of an inverse pendulum over a unicycle on slopes.nb
+
+Then we wrote the model in Simulink, computing the dynamics matrices stored in "matlab\Matrici_eq_dinamica\". 
 A model based controller was developed. Two estimators were also developed: 
 1. Kalman filter (EKF) 
 2. Mahony filter
 
-You'll find more tecnical information and all the implemented equations on:
+You'll find more tecnical information and all the implemented equations in:
 
 		Final presentation.pptx
 		
