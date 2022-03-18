@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm/R2020a">
+  <slsa.mm.MaskTree type="slsa.mm.MaskTree" uuid="9b5b513d-3c19-4839-bf0b-a4f2871d27fa">
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="5f13a9e4-0fbe-479c-9b25-3616ae7c7661">
+      <blockPath>fading_filter/signal generator /Ramp2</blockPath>
+      <id>fading_filter:138</id>
+      <masks type="slsa.mm.Mask" uuid="2d4d0729-de7d-4cc0-8dd3-9e4718653f05">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="db7c3506-b3bf-4fb0-9241-334e9e7e67c8">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>slope</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0180a9bf-e5c0-4601-a913-67fad7ebb946">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>start</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a55bd478-cce2-4fb0-8b20-4383c6451834">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>InitialOutput</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="79911ee5-9ff5-4681-80f1-1371e15eba24">
+          <expression>on</expression>
+          <name>VectorParams1D</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+set_param([blkName &apos;/Constant&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Constant1&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Step&apos;], &apos;VectorParams1D&apos;,VectorParams1D);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="9cd39c36-5d72-409a-87ff-64949764b03f">
+      <blockPath>fading_filter/signal generator /Ramp3</blockPath>
+      <id>fading_filter:140</id>
+      <masks type="slsa.mm.Mask" uuid="511cbea8-be9f-479c-98af-f2055cf99bbb">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d95d055c-abac-4d44-a4c4-779336ab22f2">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>slope</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a0bd42bd-b903-41a3-9e31-9ce82b54fdab">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>start</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="69307ae1-df29-4137-a370-312dd74019e7">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>InitialOutput</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="862683d5-ec20-4b5c-99fe-82a1bc3220f9">
+          <expression>on</expression>
+          <name>VectorParams1D</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+set_param([blkName &apos;/Constant&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Constant1&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Step&apos;], &apos;VectorParams1D&apos;,VectorParams1D);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="3de9de61-f6f9-4909-9e29-abd26d772443">
+      <blockPath>fading_filter/signal generator /Band-Limited White Noise</blockPath>
+      <id>fading_filter:203</id>
+      <masks type="slsa.mm.Mask" uuid="a7523911-0326-410a-9030-b675aaf32f42">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f3d44e6f-b113-4acd-8db6-0afd9c602470">
+          <evaluate>true</evaluate>
+          <expression>totGyroNoisePower</expression>
+          <isTunable>true</isTunable>
+          <name>Cov</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="42ff1841-bbaa-41d2-8a79-b4d38636761f">
+            <name>totGyroNoisePower</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="6aace639-9112-48f5-b26c-f667dbb48d10">
+          <evaluate>true</evaluate>
+          <expression>0.1</expression>
+          <name>Ts</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="316fe8d3-0da3-4d66-86a0-14cb99401976">
+          <evaluate>true</evaluate>
+          <expression>seedGyro1</expression>
+          <name>seed</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="5963e64d-712d-408c-8ce1-9faef5980708">
+            <name>seedGyro1</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1b64bcb8-2ac7-460a-8dd2-3f4daed7c222">
+          <expression>on</expression>
+          <name>VectorParams1D</name>
+        </dialogParameters>
+        <initializationCode>if any(Cov &lt; 0),
+	error(&apos;The &apos;&apos;Noise power&apos;&apos; must be positive. &apos;),
+end;
+
+r = [-0.4326
+   -1.6656
+    0.1253
+    0.2877
+   -1.1465
+    1.1909
+    1.1892
+   -0.0376
+    0.3273
+    0.1746
+   -0.1867
+    0.7258]&apos;;
+
+r2 = [r(1),r;r,r(12)]; 
+t =[1:13;1:13]; 
+
+if any(Ts==-1), 
+	error(&apos;Sample time (-1) is set to be back-inherited from the block(s) it drives. You should explicitly specify the sample time of the source block. &apos;), 
+end;
+set_param([gcb &apos;/White Noise&apos;],&apos;VectorParams1D&apos;,VectorParams1D);</initializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="01cd445f-52e1-4578-8c8e-2e164c85f522">
+      <blockPath>fading_filter/signal generator /Ramp1</blockPath>
+      <id>fading_filter:34</id>
+      <masks type="slsa.mm.Mask" uuid="d5ad840d-fb0e-4510-8f29-04b0d0f04fd8">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="06bc7638-9e7f-4dda-b0a2-db65c8cc2313">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>slope</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="9ef5dd2f-592b-433b-b65b-445d97357431">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>start</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="bb7d2f4e-d3ca-4017-822b-b959c9119c42">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>InitialOutput</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a92a3f38-55f5-4377-ba76-18da6f1b6892">
+          <expression>on</expression>
+          <name>VectorParams1D</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+set_param([blkName &apos;/Constant&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Constant1&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Step&apos;], &apos;VectorParams1D&apos;,VectorParams1D);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="b4bbd306-f344-4977-9ead-3a054f4b38ca">
+      <childrenIds>fading_filter:138</childrenIds>
+      <childrenIds>fading_filter:140</childrenIds>
+      <childrenIds>fading_filter:203</childrenIds>
+      <childrenIds>fading_filter:34</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.Variable" uuid="af032c60-95bb-4197-8afa-476924fc2a52">
+      <name>seedGyro1</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAJBiBDaY/MA/</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.Variable" uuid="b2f1eeb2-08fc-4e64-823d-2be3d74a04d4">
+      <name>totGyroNoisePower</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAM9bs/mbjck+</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <flags type="slsa.mm.MaskTreeFlags" uuid="614bc2dd-8aa7-466a-b52d-1e939150687a"/>
+  </slsa.mm.MaskTree>
+</MF0>
