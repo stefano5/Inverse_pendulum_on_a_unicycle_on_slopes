@@ -1,5 +1,5 @@
 % Robotics project, Menolotto Mariangela & Stefano Maugeri
-path = '../export/';
+path = '../mathematica/export/';
 
 if exist(path, 'dir') == 0
    disp("Mathematica not found"); 
