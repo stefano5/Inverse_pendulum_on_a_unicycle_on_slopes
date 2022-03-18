@@ -17,7 +17,7 @@ A model based controller was developed. Two estimators were also developed:
 1. Kalman filter (EKF) 
 2. Mahony filter
 
-You'll find more tecnical information and all the implemented equations in:
+You'll find more tecnical information, all the implemented equations and all the results (with video) in:
 
 		Final presentation.pptx
 		
